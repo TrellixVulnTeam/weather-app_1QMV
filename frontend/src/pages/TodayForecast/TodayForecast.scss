@@ -1,0 +1,76 @@
+@import '../../App';
+.app__todayWrapper {
+  padding: 20px 0;
+  width: 100%;
+  .app__imgWrapper {
+    max-width: 400px;
+    padding: 0 30px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .app__city {
+    display: flex;
+    justify-content: center;
+    font-size: 34px;
+  }
+  .app__changeBtn{
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 0 0;
+
+  }
+  .smallButton{
+    display: flex;
+    align-items: center;
+    background: #353535;
+    color: #fff;
+    font-size: 14px;
+    border:none;
+    border-radius: 15px;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-family: $main-font;
+    transition-duration: .3s;
+    &:hover{
+      background: lighten(#353535,5);
+      transform:scale(0.95);
+      transition-duration: .3s;
+      box-shadow: 2px 2px 0 0 black;
+    }
+    span{
+      position: relative;
+      display: block;
+      content: '';
+      width: 10px;
+      top:1.3px;
+      margin-left: 5px;
+      background-color:white;
+      height: 1.4px;
+      &::after{
+        position: absolute;
+        display: block;
+        content: '';
+        top:3px;
+        width: 10px;
+        background-color:white;
+        height: 1.4px;
+      }
+      &::before{
+        position: absolute;
+        display: block;
+        content: '';
+        bottom:3px;
+        width: 10px;
+        background-color:white;
+        height: 1.4px;
+      }
+    }
+  }
+  .app__redirectButton{
+    margin: 30px auto 0 auto;
+  }
+}
