@@ -1,0 +1,18 @@
+@import '../../../App';
+.myButton{
+  max-width: 100px;
+  padding: 10px 15px;
+  background: #353535;
+  border-radius: 15px;
+  border:none;
+  color:white;
+  font-family: $main-font;
+  cursor:pointer;
+  transition-duration: .3s;
+  &:hover{
+    background: lighten(#353535,5);
+    transform:scale(0.95);
+    transition-duration: .3s;
+    box-shadow: 2px 2px 0 0 black;
+  }
+}

@@ -1,0 +1,142 @@
+@import "../../App.scss";
+.app__my-modal{
+  position: absolute;
+  padding: 20px 18px;
+  background-image: url('../../assets/gray.png');
+  background-size: cover;
+  left: 0;
+  z-index: 2;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top:130px;
+  height: 300px;
+  width: 300px;
+  border-radius: 30px;
+  input{
+    height: 20px;
+    font-size: 18px;
+    padding: 5px;
+  }
+.modal__form{
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+}
+.my-modal-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.my-modal-enter-active{
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.my-modal-exit {
+  opacity: 1;
+}
+.my-modal-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+.css-1ptx2yq-MuiInputBase-root-MuiInput-root::after,{
+  border-bottom: 2px solid #353535!important;
+}
+.css-1ptx2yq-MuiInputBase-root-MuiInput-root::before{
+  border-bottom: 0.7px solid #dbdada !important;
+}
+.MuiTextField-root{
+  flex:1 1 150px;
+  label{
+    color: #353535!important;
+  }
+  input{
+    font-family: $main-font;
+    color: #353535;
+  }
+}
+.app__modalConfirmButton{
+  margin-top: 7px;
+  margin-left: 6px;
+}
+.background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
+
+}
+.modal__closeBtn{
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+  cursor:pointer;
+  &::after,&::before{
+    position: absolute;
+    content:'';
+    width: 3px;
+    height: 15px;
+    margin-left: 7px;
+    background: #353535;
+    transition-duration: .3s;
+  }
+  &::after{
+    transform:rotate(45deg);
+  }
+  &::before{
+    transform:rotate(-45deg);
+  }
+  @keyframes rotateCross{
+    25%{
+      transform: rotate(60deg);
+    }
+    50%{
+      transform: rotate(45deg);
+    }
+
+  }
+  @keyframes rotateCross1{
+    25%{
+      transform: rotate(-60deg);
+    }
+    50%{
+      transform: rotate(-45deg);
+    }
+
+  }
+}
+.modal__closeBtn:hover{
+  &::after,&::before{
+    background:  lighten(#353535,10);
+    transition-duration: .3s;
+  }
+  &::after{
+    animation:1s rotateCross;
+  }
+  &::before{
+    animation:1s rotateCross1;
+  }
+}
+.app__modalLoginForm{
+  display: flex;
+  margin: 30px 0 0 0;
+  justify-content: center;
+  flex: 0 1 100%;
+  flex-wrap: wrap;
+  span{
+    flex: 0 1 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .loginBtn{
+    margin-top: 20px;
+  }
+}

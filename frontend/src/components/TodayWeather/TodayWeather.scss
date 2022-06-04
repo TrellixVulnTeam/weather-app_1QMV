@@ -1,0 +1,51 @@
+.app__someInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .app__temp{
+    font-size: 48px;
+    position: relative;
+    &::after{
+      content:'';
+      position: absolute;
+      top: -2px;
+      right: -13px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border:2px solid;
+    }
+  }
+  .app__conditions{
+    font-size: 24px;
+  }
+}
+.app__date{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.app__addInfo{
+  display: flex;
+  .addInfoItem{
+    flex:0 1 calc(100% / 3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .app__addInfoIcon{
+      width: 32px;
+      height: 32px;
+      margin-left: -4px;
+    }
+    .app__addInfoText{
+      flex:0 1 100%;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  }
+}
