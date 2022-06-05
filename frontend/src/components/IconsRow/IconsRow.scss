@@ -1,0 +1,21 @@
+.app__addInfo{
+  display: flex;
+  .addInfoItem{
+    flex:0 1 calc(100% / 3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .app__addInfoIcon{
+      width: 32px;
+      height: 32px;
+      margin-left: -4px;
+    }
+    .app__addInfoText{
+      flex:0 1 100%;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  }
+}

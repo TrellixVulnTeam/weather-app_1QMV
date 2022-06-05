@@ -2,10 +2,13 @@ import {ActionTypes, IActions} from "../types/action-types";
 
 
 export interface IWeatherDays {
-    datetime: string,
+    datetimeEpoch: string,
     tempmax: number,
     tempmin: number,
     conditions: string
+    windspeed: number,
+    pressure:number,
+    cloudcover: number,
 }
 
 export interface ICurrentSate {

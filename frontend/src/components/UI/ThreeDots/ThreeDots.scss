@@ -1,0 +1,54 @@
+@import "../../../App.scss";
+.sevenDays__threeDots {
+  position: absolute;
+  width: 13px;
+  height: 30px;
+  right: 20px;
+  top: 27px;
+  &:hover {
+    cursor: pointer;
+    .sevenDays__dot {
+      cursor: pointer;
+      transition-duration: .3s;
+      background: lighten($main-color, 10);
+
+      &::before, &::after {
+        transition-duration: .3s;
+        background: lighten($main-color, 10);
+      }
+    }
+  }
+
+  .sevenDays__dot, {
+    content: '';
+    width: 7px;
+    height: 7px;
+    display: block;
+    border-radius: 50%;
+    background: $main-color;
+    position: relative;
+    top: 10px;
+    transition-duration: .3s;
+
+    &::before, &::after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: $main-color;
+      transition-duration: .3s;
+    }
+
+    &::before {
+      position: absolute;
+      top: -5px;
+      margin-top: -5px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 5px;
+      margin-top: 5px;
+    }
+  }
+}
