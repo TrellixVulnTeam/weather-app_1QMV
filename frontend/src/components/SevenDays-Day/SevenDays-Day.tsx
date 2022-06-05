@@ -20,7 +20,7 @@ const SevenDaysDay:FC<SevenDaysProps> = ({day,date}) => {
                 <div className='sevenDays__temp-date'>
                     <div className='sevenDays__tempInfo'>
                         <div className='sevenDays__highest tempEx'>Highest<br/>
-                            <div className='sevenDays__tempEx'>{day?.tempmax}</div>
+                            <div className='sevenDays__tempEx tempMaxUp'>{day?.tempmax}</div>
                         </div>
                         <div className='sevenDays__lowest tempEx'>Lowest<br/>
                             <div className='sevenDays__tempEx'>{day?.tempmin}</div>

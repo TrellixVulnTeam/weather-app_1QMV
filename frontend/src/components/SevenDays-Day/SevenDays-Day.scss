@@ -64,3 +64,18 @@
     }
   }
 }
+.tempMaxUp{
+  position: relative;
+  &::after{
+    content:'';
+    position: absolute;
+    width: 3px;
+    height: 102%;
+    right: -30px;
+    top: -24px;
+    background: $main-color;
+  }
+}
+.sevenDays__lowerInfo{
+  margin-bottom: 45px;
+}
