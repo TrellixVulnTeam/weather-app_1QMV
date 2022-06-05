@@ -9,6 +9,7 @@ import Loader from "../../components/Loader/Loader";
 import ModalSearch from "../../components/ModalSearch/ModalSearch";
 import TodayWeather from "../../components/TodayWeather/TodayWeather";
 import {CSSTransition} from "react-transition-group";
+import ChangeButton from "../../components/UI/ChangButton/ChangeButton";
 
 
 const TodayForecast: FC = () => {
@@ -35,10 +36,7 @@ const TodayForecast: FC = () => {
     return (
         <div className='app__todayWrapper'>
             <div className="app__city">{currentCity}</div>
-            <div className='app__changeBtn'>
-                <button className='smallButton' onClick={openModalMenu}>Change <span
-                    className='app__burger-menu'></span></button>
-            </div>
+            <ChangeButton onClick={openModalMenu}/>
             {isOpenModal ? <div className="background" onClick=
                 {() => dispatch({type: ActionTypesModal.modalClose})}></div> : ''}
             <CSSTransition in={isOpenModal} unmountOnExit mountOnEnter

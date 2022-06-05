@@ -1,0 +1,11 @@
+@import '../../App.scss';
+
+.sevenDays {
+  &__wrapper {
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+}

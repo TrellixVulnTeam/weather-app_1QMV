@@ -1,0 +1,12 @@
+.sevenDays {
+  &__header {
+    display: flex;
+    justify-content: center;
+
+    .sevenDays__cityName {
+      display: flex;
+      justify-content: center;
+      font-size: 34px;
+    }
+  }
+}
