@@ -8,7 +8,7 @@ import {ActionTypesModal} from "../../redux/reducers/modalSearchReducer";
 import './ModalSearch.scss';
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import MyButton from "../UI/MyButton/MyButton";
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 
 const ModalSearch: FC = () => {
     const {fetchWeather} = useActions();
@@ -18,13 +18,15 @@ const ModalSearch: FC = () => {
     const isAuthed = useTypedSelector(state => state.user.isAuthed);
     const [loginOpen, setLoginOpen] = useState<boolean>(false);
     const navigate = useNavigate();
+    const location = useLocation();
     const searchWeatherHandler = async () => {
         try {
             setIsLoading(true);
             const weather = await WeatherApi.getWeatherByCity(searchValue);
             dispatch({type: ActionTypesModal.modalClose});
             setIsLoading(false);
-            navigate('/forecast/'+searchValue,{replace:true});
+            location.pathname.split('/')[1]==='7days'?navigate('/7days/'+searchValue,{replace:true})
+                :navigate('/forecast/'+searchValue,{replace:true});
             return fetchWeather(weather);
         } catch (e) {
             setIsLoading(false);

@@ -1,0 +1,66 @@
+@import '../../App.scss';
+.sevenDays{
+  &__dayInfo {
+    padding: 0 20px;
+    .sevenDays__upperInfo {
+      .sevenDays__imgAndPrediction {
+        .sevenDays__imgWrapper {
+          max-width: 400px;
+          margin: 0 auto;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.sevenDays__currentState{
+  flex:0 1 400px;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.sevenDays__upperInfo{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap:50px;
+}
+.sevenDays__temp-date{
+  flex: 1 1 200px;
+}
+.sevenDays__tempInfo{
+  display: flex;
+  justify-content: space-evenly;
+}
+.sevenDays__date{
+  flex:0 1 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 26px;
+  margin-top: 40px;
+}
+.tempEx{
+  font-size: 24px;
+  .sevenDays__tempEx{
+    font-size: 48px;
+    padding: 50px 0 0 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &::before{
+      content:'';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      top: 40px;
+      right: 3px;
+      border:2px solid $main-color;
+    }
+  }
+}

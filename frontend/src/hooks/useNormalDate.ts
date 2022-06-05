@@ -1,13 +1,12 @@
-import {ICurrentSate} from "../redux/reducers/weatherReducer";
 import {daysLong} from "../utils/days";
 import {useMemo} from "react";
 
-export const useNormalDate = (currentWeatherState: ICurrentSate) => {
+
+export const useNormalDate = (currentWeatherState:any) => {
     function getLongDay(daySh: string) {
         return daysLong.filter(day => day.dayShort === daySh)[0].dayLong
     }
-
-    const date = useMemo<string>(() => {
+    const date:string = useMemo<string>(() => {
         if (currentWeatherState?.datetimeEpoch === undefined) return '';
         let fullDate: string = String(new Date(currentWeatherState?.datetimeEpoch * 1000)).split('202')[0];
         const day: string = getLongDay(fullDate.split(' ')[0]);

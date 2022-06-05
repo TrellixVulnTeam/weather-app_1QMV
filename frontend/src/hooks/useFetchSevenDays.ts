@@ -33,5 +33,5 @@ export const useFetchSevenDays = ()=>{
     useEffect(() => {
         !daysArray? fetchSevenDays(city):setIsLoading(false);
     }, []);
-    return [isLoading,city];
+    return [isLoading,city,daysArray] as const;
 }
